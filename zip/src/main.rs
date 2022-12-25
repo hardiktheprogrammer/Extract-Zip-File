@@ -42,9 +42,16 @@ fn zip_main() -> i32 {
                 fs:create_dir_all(outpath).unwrap();
         } else {
             println!(
+                "file {} extracted to \"{}\" ({} bytes)",
+                i,
+                outpath.display(),
+                file.size()
 
-                
-            )
+
+
+
+            );
+            if let some
         }
 
 
