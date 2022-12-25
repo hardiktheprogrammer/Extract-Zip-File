@@ -25,8 +25,12 @@ fn zip_main() -> i32 {
             None => continue,
         };
         {
+            let comment = file.comment();
+            if !comment.is_empty() {
+                println!("File {} comment:{}"i,commnet);
+            }
             
-        }
+         }
 
 
         }
