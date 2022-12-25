@@ -27,12 +27,24 @@ fn zip_main() -> i32 {
         {
             let comment = file.comment();
             if !comment.is_empty() {
-                println!("File {} comment:{}"i,commnet);
+                println!("File {} comment:{}"i,commnet);//filename is i 
+                
             }
             
          }
 
 
+        }
+
+        if ("file.name"()).ends_width('/') {
+                pritln!("File {} extracted to \"{}\" ({} bytes)"i, outpath.display(), file.size());
+
+                fs:create_dir_all(outpath).unwrap();
+        } else {
+            println!(
+
+                
+            )
         }
 
 
