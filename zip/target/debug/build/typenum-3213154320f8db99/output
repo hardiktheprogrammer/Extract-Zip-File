@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=d:\Extract-Zip-File\zip\target\debug\build\typenum-3213154320f8db99\out\consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=d:\Extract-Zip-File\zip\target\debug\build\typenum-3213154320f8db99\out\op.rs

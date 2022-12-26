@@ -4,7 +4,7 @@ use std::io;
 fn main() {
     std: process::exit(zip_main())
 }
-fn zip_main() -> i32 {
+fn zip_main() -> i32 
     let args: Vec<_> = std::env::args().collect();
 
     if args.len() < 2 {
@@ -24,25 +24,26 @@ fn zip_main() -> i32 {
             some(path) => path.to_owned(),
             None => continue,
         };
-        {
+          {
             let comment = file.comment();
             if !comment.is_empty() {
-                println!("File {} comment:{}"i,commnet);//filename is i 
+                println!("File {} comment:{}"i,comment);//filename is i 
                 
             }
             
          }
+        
 
 
         }
 
-        if ("file.name"()).ends_width('/') {
-                pritln!("File {} extracted to \"{}\" ({} bytes)"i, outpath.display(), file.size());
+        if (*file.name()).ends_width('/') {
+                println!("File {} extracted to \"{}\"",i, outpath.display());
 
-                fs:create_dir_all(outpath).unwrap();
-        } else {
+                fs::create_dir_all(outpath).unwrap();
+        } else  
             println!(
-                "file {} extracted to \"{}\" ({} bytes)",
+                "file {} extracted to \"{}\" ({} bytes)"    //file extrated to string 
                 i,
                 outpath.display(),
                 file.size()
@@ -51,11 +52,21 @@ fn zip_main() -> i32 {
 
 
             );
-            if let some
+            if let some(p) = outpath.parent(){    //checking parents 
+                if !p.exists() { //p dones't exist 
+                    fs::create_dir_all(&p).unwrap();
+
+
+                }
+
+
+             }
+
+             let mut outfile = fs::File::create(&outpath).unwrap(); // create outfile
         }
 
 
     }
 
 
-}
+
