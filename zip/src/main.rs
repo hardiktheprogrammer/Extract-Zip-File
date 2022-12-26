@@ -41,9 +41,9 @@ fn zip_main() -> i32
                 println!("File {} extracted to \"{}\"",i, outpath.display());
 
                 fs::create_dir_all(outpath).unwrap();
-        } else  
+        } else {
             println!(
-                "file {} extracted to \"{}\" ({} bytes)"    //file extrated to string 
+            "File {} extracted to \"{}\" ({} bytes)", //file extrated to string 
                 i,
                 outpath.display(),
                 file.size()
@@ -63,11 +63,11 @@ fn zip_main() -> i32
              }
 
              let mut outfile = fs::File::create(&outpath).unwrap();
-             io::copy(&mut file, &mut outfile).unwrap(); // create outfile
+             io::copy(&mut file, &mut outfile).unwrap(); // create outfile and copying file 
         }
 
 
     }
 
 
-
+}
