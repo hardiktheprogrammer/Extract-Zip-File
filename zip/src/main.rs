@@ -62,7 +62,8 @@ fn zip_main() -> i32
 
              }
 
-             let mut outfile = fs::File::create(&outpath).unwrap(); // create outfile
+             let mut outfile = fs::File::create(&outpath).unwrap();
+             io::copy(&mut file, &mut outfile).unwrap(); // create outfile
         }
 
 
