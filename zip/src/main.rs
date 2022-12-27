@@ -54,7 +54,7 @@ fn zip_main() -> i32
             );
             if let some(p) = outpath.parent(){    //checking parents 
                 if !p.exists() { //p dones't exist 
-                    fs::create_dir_all(&p).unwrap();
+                    fs::create_dir_all(&p).unwrap();// create all dir 
 
 
                 }
@@ -64,7 +64,10 @@ fn zip_main() -> i32
 
              let mut outfile = fs::File::create(&outpath).unwrap();
              io::copy(&mut file, &mut outfile).unwrap(); // create outfile and copying file 
-        }
+        
+        
+        
+            }
 
 
     }
