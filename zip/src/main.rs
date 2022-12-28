@@ -68,6 +68,16 @@ fn zip_main() -> i32
         
         
             }
+            #[cfg(unix)]
+            {
+
+                use std::os::unix::fs::PermissionsExt; // give persmissions to users 
+
+                if let some(mode) = file.unix_mode(){
+                    fs::set_permissions(&outpath,fs::Permissions::from_mode(mode)).unwrap(); // set permissions to useers files for permissions
+
+                }
+            }
 
 
     }
